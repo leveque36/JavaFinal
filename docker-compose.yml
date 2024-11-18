@@ -1,0 +1,30 @@
+version: '3'
+services:
+
+  db-products:
+    container_name: db-products
+    image: postgres:15.2
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ms_products
+      POSTGRES_USER: java
+      POSTGRES_PASSWORD: java123
+    ports:
+      - 5431:5432
+    expose:
+      - 5432
+    command: -p 5432
+
+  db-orders:
+    container_name: db-orders
+    image: postgres:15.2
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ms_orders
+      POSTGRES_USER: java
+      POSTGRES_PASSWORD: java123
+    ports:
+      - 3000:5432
+    expose:
+      - 5432
+    command: -p 5432
