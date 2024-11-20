@@ -19,6 +19,7 @@
 	<modules>
 		<module>orders</module>
 		<module>products</module>
+		<module>proveedores</module>
 	</modules>
 
 	<dependencyManagement>
